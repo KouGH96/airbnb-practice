@@ -1,6 +1,10 @@
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className="text-rose-500">Hello why isn't tailwind working</div>
+    <div className='text-rose-500'>Hello tailwind please work!</div>
   )
 }
