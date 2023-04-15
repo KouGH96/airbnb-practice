@@ -1,6 +1,7 @@
 import { Nunito } from 'next/font/google'
 import './globals.css'
 import Navbar from "./components/navbar/Navbar";
+import ClientOnly from './components/ClientOnly';
 
 //metadata is reservered
 export const metadata = {
@@ -19,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <ClientOnly>
         <Navbar />
+        </ClientOnly>
         {children}
       </body>
     </html>
   )
 }
+
+//the ClientOnly we created, will wrap all components, that deal with client only to prevent hydration
