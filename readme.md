@@ -4,18 +4,12 @@
 Fork and clone the repository with http:
 https://github.com/KouGH96/airbnb-practice.git
 
-create python environment, activate it.
-
-upgrade pip if needed:
-`python -m pip install --upgrade pip`
-
-`python -m pip install -r requirements.txt`
-
-create node environment with nodeenv.
-`nodeenv env`
-
-deactivate the venv, and activate the env with 
-cmd `.\env\Scripts\activate`
+# If you have Node installed already
+`cd airbnb-practice`
+`npm run dev`
+# If you do not have node installed, I have an env, with node inside it. 
+`./env/Scripts/activate` for windows users
+`./.env/bin/activate` for MAC users
 
 cd airbnb-practice
 
