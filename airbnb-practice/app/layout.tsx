@@ -3,8 +3,9 @@ import './globals.css'
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from './components/ClientOnly';
 import Modal from './components/modals/Modal';
+import RegisterModal from './components/modals/RegisterModal';
 
-//metadata is reservered
+//metadata is reserved
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb practice project next.js react, ',
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-        <Modal title="Hellow World" isOpen/>
+          <RegisterModal />
         <Navbar />
         </ClientOnly>
         {children}
