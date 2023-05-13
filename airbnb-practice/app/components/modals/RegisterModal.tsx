@@ -8,6 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '../Heading';
 
 const RegisterModal = () => {
     const registerModal = useRegisterModal();
@@ -28,7 +29,7 @@ const RegisterModal = () => {
 
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
         setIsLoading(true);
-        
+
         axios.post('/api/register', data)
             .then(() => {
                 registerModal.onClose();
@@ -43,7 +44,7 @@ const RegisterModal = () => {
 
     const bodyContent = (
         <div className='flex flex-col gap-4'>
-            Hello Modal Body!
+            <Heading level={3}>Register</Heading>
         </div>
     )
 
