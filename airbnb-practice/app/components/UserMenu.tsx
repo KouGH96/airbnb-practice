@@ -5,10 +5,13 @@ import React, { useCallback } from 'react';
 import { useState } from 'react';
 import MenuItem from './navbar/MenuItem';
 import useRegisterModal from '../hooks/useRegisterModal';
+import LoginModal from './modals/LoginModal';
+import useLoginModal from '../hooks/useLoginModal';
 
 const UserMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
     const registerModal = useRegisterModal();
+    const loginModal = useLoginModal();
 
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value)
@@ -74,7 +77,7 @@ const UserMenu = () => {
                     <div className='flex flex-col cursor-pointer'>
                         <>
                             <MenuItem 
-                            onClick={() => {}}
+                            onClick={loginModal.onOpen}
                             label='Login'
                             />
                             <MenuItem 
