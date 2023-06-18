@@ -7,7 +7,7 @@ import RegisterModal from './components/modals/RegisterModal';
 import ToasterProvider from './providers/ToasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
-
+//I need to find the keys and secret for the .env, working on a different computer.
 //metadata is reserved
 export const metadata = {
   title: 'Airbnb',
